@@ -3,7 +3,8 @@ export OSH=$HOME/.oh-my-bash
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
-OSH_THEME="font"
+#OSH_THEME="font"
+OSH_THEME="sexy"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -47,7 +48,7 @@ OSH_THEME="font"
 # Custom plugins may be added to ~/.oh-my-bash/custom/plugins/
 # Example format: plugins=(core rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(core git bashmarks progress)
+plugins=(tmux core git bashmarks progress)
 
 source $OSH/oh-my-bash.sh
 
@@ -79,3 +80,6 @@ source $OSH/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
+
+
+export PATH=${HOME}/usr/bin:${HOME}/usr/bin_v1:$PATH

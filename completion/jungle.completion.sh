@@ -1,1 +1,1 @@
-[[ -x "$(which jungle)" ]] && eval "$(_JUNGLE_COMPLETE=source jungle)"
+[[ -x "$(which jungle 2>/dev/null)" ]] && eval "$(_JUNGLE_COMPLETE=source jungle)"
