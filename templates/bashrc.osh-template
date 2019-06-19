@@ -82,4 +82,9 @@ source $OSH/oh-my-bash.sh
 # alias ohmybash="mate ~/.oh-my-bash"
 
 
-export PATH=${HOME}/usr/bin:${HOME}/usr/bin_v1:$PATH
+[ -z "${PATH##*/sbin*}" ] || PATH=$PATH:/sbin:/usr/sbin
+
+echo $PATH | grep -q "${HOME}/usr/bin" || export PATH=${HOME}/usr/bin:$PATH
+echo $PATH | grep -q "${HOME}/usr/sbin" || export PATH=${HOME}/usr/sbin:$PATH
+echo $PATH | grep -q "${HOME}/usr/bin_v1" || export PATH=${HOME}/usr/bin_v1:$PATH
+echo $LD_LIBRARY_PATH | grep -q "${HOME}/usr/lib" || export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${HOME}/usr/lib
