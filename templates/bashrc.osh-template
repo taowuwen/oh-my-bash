@@ -4,7 +4,12 @@ export OSH=$HOME/.oh-my-bash
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 #OSH_THEME="font"
-OSH_THEME="sexy"
+#OSH_THEME="sexy"
+#OSH_THEME="90210"
+#OSH_THEME="envy"
+#OSH_THEME="simple"
+OSH_THEME="minimal"
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -87,4 +92,12 @@ source $OSH/oh-my-bash.sh
 echo $PATH | grep -q "${HOME}/usr/bin" || export PATH=${HOME}/usr/bin:$PATH
 echo $PATH | grep -q "${HOME}/usr/sbin" || export PATH=${HOME}/usr/sbin:$PATH
 echo $PATH | grep -q "${HOME}/usr/bin_v1" || export PATH=${HOME}/usr/bin_v1:$PATH
-echo $LD_LIBRARY_PATH | grep -q "${HOME}/usr/lib" || export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${HOME}/usr/lib
+echo $LD_LIBRARY_PATH | grep -q "${HOME}/usr/lib" || export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${HOME}/usr/lib:${HOME}/usr/lib64
+
+echo $PKG_CONFIG_PATH | grep -q "${HOME}/usr/lib/pkgconfig" || export PKG_CONFIG_PATH=$LD_LIBRARY_PATH:${HOME}/usr/lib/pkgconfig
+
+echo $MANPATH | grep -q ${HOME}/usr/share/man || export MANPATH=$MANPATH:${HOME}/usr/share/man
+
+
+
+export EDITOR=vim
